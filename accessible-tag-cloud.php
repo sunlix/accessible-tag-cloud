@@ -185,7 +185,8 @@ class Acc_tag_cloud extends WP_Widget
 
 		foreach ($terms as $term)
 		{
-			$tagcloud .= '<li style="font-size:'. $term->size . $unit .';"><a href="'. get_term_link($term, $taxonomy) .'"><span class="hideme">Zum Schlagwort &#8216;</span>'. $term->name .'<span class="hideme">&#8217; gibt es '. $term->count .' Beiträge</span></a></li> ';
+			$tagcloud .= '<li style="font-size:'. $term->size . $unit .';"><a href="'. get_term_link($term, $taxonomy) .'">';
+			$tagcloud .= '<span class="hideme">Zum Schlagwort &#8216;</span>'. $term->name .'<span class="hideme">&#8217; gibt es '. $term->count .' Beiträge</span></a></li> ';
 		}
 		// Before widget (defined by themes).
 		echo $before_widget;
