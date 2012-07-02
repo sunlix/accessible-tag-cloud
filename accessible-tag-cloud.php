@@ -49,34 +49,34 @@ function acc_tag_cloud_load_widgets ()
  */
 function acc_tag_cloud_hidecss ($styling = 'default', $code = 'class="acc_tag_cloud_screenreader"')
 {
-    if ($styling == 'inline')
-    {
-    	return 'style="height:0;left:-9000px;position:absolute;width:0;"';
-    }
-    elseif ($styling == 'owncode')
-    {
-        return $code;
-    }
-    else
-    {
-        return 'class="acc_tag_cloud_screenreader"';
-    }
+	if ($styling == 'inline')
+	{
+		return 'style="height:0;left:-9000px;position:absolute;width:0;"';
+	}
+	elseif ($styling == 'owncode')
+	{
+		return $code;
+	}
+	else
+	{
+		return 'class="acc_tag_cloud_screenreader"';
+	}
 }
 /*
  * function to add default screenreader class to head
  */
 function acc_tag_cloud_defaultcss ()
 {
-   $strHtml = '<style type="text/css">
-      .acc_tag_cloud_screenreader {
-        height:0;
-        left:-9000px;
-        position:absolute;
-        width:0;
-      }
-   </style>';
+	$strHtml = '<style type="text/css">
+		.acc_tag_cloud_screenreader {
+			height:0;
+			left:-9000px;
+			position:absolute;
+			width:0;
+		}
+	</style>';
 
-   echo $strHtml;
+	echo $strHtml;
 }
 add_action('wp_head', 'acc_tag_cloud_defaultcss');
 
